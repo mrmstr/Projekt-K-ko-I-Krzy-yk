@@ -1,0 +1,15 @@
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\bin\Debug\netcoreapp3.1\Gra kółko i krzyżyk.exe
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\bin\Debug\netcoreapp3.1\Gra kółko i krzyżyk.deps.json
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\bin\Debug\netcoreapp3.1\Gra kółko i krzyżyk.runtimeconfig.json
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\bin\Debug\netcoreapp3.1\Gra kółko i krzyżyk.runtimeconfig.dev.json
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\bin\Debug\netcoreapp3.1\Gra kółko i krzyżyk.dll
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\bin\Debug\netcoreapp3.1\Gra kółko i krzyżyk.pdb
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.csprojAssemblyReference.cache
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra_kółko_i_krzyżyk.Form1.resources
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.csproj.GenerateResource.cache
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.AssemblyInfoInputs.cache
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.AssemblyInfo.cs
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.csproj.CoreCompileInputs.cache
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.dll
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.pdb
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.genruntimeconfig.cache
