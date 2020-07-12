@@ -17,8 +17,25 @@ namespace Gra_kółko_i_krzyżyk
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1.setPlayerNames(p1.Text, p2.Text);
-            this.Close();
+            if ((p1.Text == "") || (p2.Text == ""))
+            {
+                MessageBox.Show("Podaj imiona graczy zanim rozpoczniesz grę!\n Wpisz komputer w miejsce imienia dla drugiego gracza jeśli chcesz zagrać przeciwko komputerowi");
+            }
+            else
+            {
+                Form1.setPlayerNames(p1.Text, p2.Text);
+                this.Close();
+            }
+        }
+
+        private void p2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

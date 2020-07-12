@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.p1 = new System.Windows.Forms.TextBox();
             this.p2 = new System.Windows.Forms.TextBox();
+            this.p1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -56,6 +56,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Imię drugiego gracza:";
             // 
+            // p2
+            // 
+            this.p2.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.p2.Location = new System.Drawing.Point(296, 43);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(235, 28);
+            this.p2.TabIndex = 1;
+            // 
             // p1
             // 
             this.p1.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -63,14 +71,7 @@
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(235, 28);
             this.p1.TabIndex = 1;
-            // 
-            // p2
-            // 
-            this.p2.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.p2.Location = new System.Drawing.Point(296, 46);
-            this.p2.Name = "p2";
-            this.p2.Size = new System.Drawing.Size(235, 28);
-            this.p2.TabIndex = 1;
+            this.p1.TextChanged += new System.EventHandler(this.p1_TextChanged);
             // 
             // button1
             // 
@@ -92,8 +93,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(630, 83);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.p2);
             this.Controls.Add(this.p1);
+            this.Controls.Add(this.p2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -112,8 +113,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox p1;
         private System.Windows.Forms.TextBox p2;
+        private System.Windows.Forms.TextBox p1;
         private System.Windows.Forms.Button button1;
     }
 }

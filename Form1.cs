@@ -14,6 +14,7 @@ namespace Gra_kółko_i_krzyżyk
     public partial class Form1 : Form
     {
         bool turn = true;
+        bool against_computer = false;
         int turn_count = 0;
         static String player1, player2;
 
@@ -54,9 +55,10 @@ namespace Gra_kółko_i_krzyżyk
             turn_count++;
             checkForWinner();
         }
+      
 
-        // Sprawdzanie wygranego lub remisu
-        private void checkForWinner()
+    // Sprawdzanie wygranego lub remisu
+    private void checkForWinner()
         {
             bool there_is_a_winner = false;
 
@@ -184,6 +186,15 @@ namespace Gra_kółko_i_krzyżyk
             MessageBox.Show("Gracze obejmują pola na przemian dążąc do objęcia trzech pól w jednej linii, kolumnie bądź skosie przy jednoczesnym uniemożliwieniu tego samego przeciwnikowi. Pole może być objęte przez jednego gracza i nie zmienia swego właściciela przez cały przebieg gry.", "Jak grać?");
         }
 
+        // Restart
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+            this.Close();
+        }
+
         // Ładowanie okienka
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -191,6 +202,13 @@ namespace Gra_kółko_i_krzyżyk
             f2.ShowDialog();
             label1.Text = player1;
             label3.Text = player2;
+
+            if (label3.Text.ToUpper() == "KOMPUTER")
+                against_computer = true;
+            else
+                against_computer = false;
+            
+               
         }
     }
 }
