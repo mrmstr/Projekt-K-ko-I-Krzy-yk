@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Gra_kółko_i_krzyżyk
@@ -83,9 +84,15 @@ namespace Gra_kółko_i_krzyżyk
             {
                 String winner = "";
                 if (turn)
+                {
                     winner = "Kółko";
+                    o_win.Text = (Int32.Parse(o_win.Text) + 1).ToString();
+                }
                 else
+                {
                     winner = "Krzyżyk";
+                    x_win.Text = (Int32.Parse(x_win.Text) + 1).ToString();
+                }
 
                 MessageBox.Show(winner + " Wygrywa!", "Gratulacje!");
                 disableButtons();
@@ -93,7 +100,10 @@ namespace Gra_kółko_i_krzyżyk
             else
             {
                 if (turn_count == 9)
+                {
+                    draw.Text = (Int32.Parse(draw.Text) + 1).ToString();
                     MessageBox.Show("Remis!", "Koniec gry");
+                }
             }
 
         }
@@ -117,18 +127,20 @@ namespace Gra_kółko_i_krzyżyk
             turn = true;
             turn_count = 0;
 
-            try
-            {
                 foreach (Control c in Controls)
                 {
-                    Button b = (Button)c;
+                    try
+                    {
+                        Button b = (Button)c;
                     b.Enabled = true;
                     b.Text = "";
                 }
+                catch { }
             }
-            catch { }
+            
         }
 
+        // Najazd myszką
         private void button_enter(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -141,6 +153,7 @@ namespace Gra_kółko_i_krzyżyk
             }
          }
 
+        // Wyjazd myszką
         private void button_leave(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -148,6 +161,19 @@ namespace Gra_kółko_i_krzyżyk
             {
                 b.Text = "";
             }
+        }
+
+        // Reset wyników
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            o_win.Text = "0";
+            x_win.Text = "0";
+            draw.Text = "0";
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gracze obejmują pola na przemian dążąc do objęcia trzech pól w jednej linii, kolumnie bądź skosie przy jednoczesnym uniemożliwieniu tego samego przeciwnikowi. Pole może być objęte przez jednego gracza i nie zmienia swego właściciela przez cały przebieg gry.", "Jak grać?");
         }
     }
 }
