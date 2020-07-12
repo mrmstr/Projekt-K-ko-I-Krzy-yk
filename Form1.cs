@@ -57,7 +57,7 @@ namespace Gra_kółko_i_krzyżyk
             label2.Focus();
             checkForWinner();
 
-            if ((!turn) && (against_computer))
+            if ((!turn) && (against_computer) && (turn_count < 9))
             {
                 computer_make_move();
             }
@@ -83,12 +83,12 @@ namespace Gra_kółko_i_krzyżyk
                     }
                 }
             }
-               move.PerformClick();
+            if (turn_count != 9)
+                move.PerformClick();
         }
 
         private Button look_for_open_space()
         {
-            Console.WriteLine("Looking for open space");
             Button b = null;
             foreach (Control c in Controls)
             {
@@ -104,7 +104,6 @@ namespace Gra_kółko_i_krzyżyk
 
         private Button look_for_corner()
         {
-            Console.WriteLine("Looking for corner");
             if (A1.Text == "O")
             {
                 if (A3.Text == "")
@@ -159,7 +158,6 @@ namespace Gra_kółko_i_krzyżyk
 
         private Button look_for_win_or_block(string mark)
         {
-            Console.WriteLine("Looking for win or block:  " + mark);
             if ((A1.Text == mark) && (A2.Text == mark) && (A3.Text == ""))
                 return A3;
             if ((A2.Text == mark) && (A3.Text == mark) && (A1.Text == ""))
@@ -259,22 +257,25 @@ namespace Gra_kółko_i_krzyżyk
                 {
                     winner = player2;
                     o_win.Text = (Int32.Parse(o_win.Text) + 1).ToString();
+                    disableButtons();
                 }
                 else
                 {
                     winner = player1;
                     x_win.Text = (Int32.Parse(x_win.Text) + 1).ToString();
+                    disableButtons();
                 }
-
-                MessageBox.Show(winner + " Wygrywa!", "Gratulacje!");
+                
                 disableButtons();
+                MessageBox.Show(winner + " Wygrywa!", "Koniec gry!");
             }
             else
             {
                 if (turn_count == 9)
                 {
                     draw.Text = (Int32.Parse(draw.Text) + 1).ToString();
-                    MessageBox.Show("Remis!", "Koniec gry");
+                    disableButtons();
+                    MessageBox.Show("Remis!", "Koniec gry!");
                 }
             }
 
@@ -283,15 +284,17 @@ namespace Gra_kółko_i_krzyżyk
         // Wyłączanie przycisków
         private void disableButtons()
         {
-            try
-            {
+           
                 foreach (Control c in Controls)
                 {
-                    Button b = (Button)c;
-                    b.Enabled = false;
-                }
+                    try
+                    {
+                        Button b = (Button)c;
+                        b.Enabled = false;
+                    }
+                    catch { }
             }
-            catch { }
+          
         }
         // Nowa Gra
         private void toolStripMenuItem4_Click(object sender, EventArgs e)

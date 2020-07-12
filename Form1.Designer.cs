@@ -200,6 +200,7 @@
             // 
             // toolStripMenuItem4
             // 
+            this.toolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem4.Image")));
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(181, 24);
             this.toolStripMenuItem4.Text = "Nowa gra";
@@ -217,6 +218,7 @@
             // 
             // toolStripMenuItem8
             // 
+            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
             this.toolStripMenuItem8.Size = new System.Drawing.Size(181, 24);
             this.toolStripMenuItem8.Text = "Zmiana imion";
@@ -242,6 +244,7 @@
             // 
             // toolStripMenuItem7
             // 
+            this.toolStripMenuItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem7.Image")));
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem7.Text = "Jak grać?";
@@ -249,6 +252,7 @@
             // 
             // toolStripMenuItem3
             // 
+            this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
             this.toolStripMenuItem3.Text = "Informacje";
@@ -269,7 +273,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(104, 272);
+            this.label2.Location = new System.Drawing.Point(103, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 3;
@@ -280,7 +284,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(187, 272);
+            this.label3.Location = new System.Drawing.Point(184, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 20);
             this.label3.TabIndex = 3;
@@ -291,7 +295,7 @@
             // 
             this.x_win.AutoSize = true;
             this.x_win.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.x_win.Location = new System.Drawing.Point(33, 292);
+            this.x_win.Location = new System.Drawing.Point(37, 292);
             this.x_win.Name = "x_win";
             this.x_win.Size = new System.Drawing.Size(18, 19);
             this.x_win.TabIndex = 4;
@@ -301,7 +305,7 @@
             // 
             this.draw.AutoSize = true;
             this.draw.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.draw.Location = new System.Drawing.Point(118, 292);
+            this.draw.Location = new System.Drawing.Point(121, 292);
             this.draw.Name = "draw";
             this.draw.Size = new System.Drawing.Size(18, 19);
             this.draw.TabIndex = 4;
@@ -311,7 +315,7 @@
             // 
             this.o_win.AutoSize = true;
             this.o_win.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.o_win.Location = new System.Drawing.Point(200, 292);
+            this.o_win.Location = new System.Drawing.Point(197, 292);
             this.o_win.Name = "o_win";
             this.o_win.Size = new System.Drawing.Size(18, 19);
             this.o_win.TabIndex = 4;

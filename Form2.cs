@@ -19,7 +19,7 @@ namespace Gra_kółko_i_krzyżyk
         {
             if ((p1.Text == "") || (p2.Text == ""))
             {
-                MessageBox.Show("Podaj imiona graczy zanim rozpoczniesz grę!\n Wpisz komputer w miejsce imienia dla drugiego gracza jeśli chcesz zagrać przeciwko komputerowi");
+                MessageBox.Show("Podaj imiona graczy zanim rozpoczniesz grę!\nWpisz komputer w miejsce imienia dla drugiego gracza jeśli chcesz zagrać przeciwko komputerowi.");
             }
             else
             {
@@ -36,6 +36,16 @@ namespace Gra_kółko_i_krzyżyk
         private void p1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            p2.Text = "Komputer";
         }
     }
 }
