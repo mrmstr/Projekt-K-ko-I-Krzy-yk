@@ -15,12 +15,19 @@ namespace Gra_kółko_i_krzyżyk
     {
         bool turn = true;
         int turn_count = 0;
-
+        static String player1, player2;
 
         public Form1()
         {
             InitializeComponent();
         }
+
+        public static void setPlayerNames(String n1, String n2)
+        {
+            player1 = n1;
+            player2 = n2;
+        }
+
         // Informacje
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
@@ -85,12 +92,12 @@ namespace Gra_kółko_i_krzyżyk
                 String winner = "";
                 if (turn)
                 {
-                    winner = "Kółko";
+                    winner = player2;
                     o_win.Text = (Int32.Parse(o_win.Text) + 1).ToString();
                 }
                 else
                 {
-                    winner = "Krzyżyk";
+                    winner = player1;
                     x_win.Text = (Int32.Parse(x_win.Text) + 1).ToString();
                 }
 
@@ -171,9 +178,19 @@ namespace Gra_kółko_i_krzyżyk
             draw.Text = "0";
         }
 
+        // Jak grać?
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Gracze obejmują pola na przemian dążąc do objęcia trzech pól w jednej linii, kolumnie bądź skosie przy jednoczesnym uniemożliwieniu tego samego przeciwnikowi. Pole może być objęte przez jednego gracza i nie zmienia swego właściciela przez cały przebieg gry.", "Jak grać?");
+        }
+
+        // Ładowanie okienka
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+            label1.Text = player1;
+            label3.Text = player2;
         }
     }
 }

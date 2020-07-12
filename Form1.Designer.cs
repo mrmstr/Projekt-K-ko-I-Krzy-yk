@@ -93,6 +93,7 @@
             // 
             // B1
             // 
+            this.B1.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.B1.Location = new System.Drawing.Point(12, 108);
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(75, 75);
@@ -104,6 +105,7 @@
             // 
             // B2
             // 
+            this.B2.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.B2.Location = new System.Drawing.Point(93, 108);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(75, 75);
@@ -115,6 +117,7 @@
             // 
             // B3
             // 
+            this.B3.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.B3.Location = new System.Drawing.Point(174, 108);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(75, 75);
@@ -126,6 +129,7 @@
             // 
             // C1
             // 
+            this.C1.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.C1.Location = new System.Drawing.Point(12, 189);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(75, 75);
@@ -137,6 +141,7 @@
             // 
             // C2
             // 
+            this.C2.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.C2.Location = new System.Drawing.Point(93, 189);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(75, 75);
@@ -148,6 +153,7 @@
             // 
             // C3
             // 
+            this.C3.Font = new System.Drawing.Font("Segoe Print", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.C3.Location = new System.Drawing.Point(174, 189);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(75, 75);
@@ -308,9 +314,12 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(278, 359);
+            this.MinimumSize = new System.Drawing.Size(278, 359);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kółko i krzyżyk";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
