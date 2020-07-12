@@ -207,9 +207,12 @@
             // 
             // toolStripMenuItem6
             // 
+            this.toolStripMenuItem6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem6.Image")));
+            this.toolStripMenuItem6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(181, 24);
             this.toolStripMenuItem6.Text = "Reset";
+            this.toolStripMenuItem6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripMenuItem8
@@ -221,6 +224,7 @@
             // 
             // toolStripMenuItem5
             // 
+            this.toolStripMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem5.Image")));
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(181, 24);
             this.toolStripMenuItem5.Text = "Wyjdź";

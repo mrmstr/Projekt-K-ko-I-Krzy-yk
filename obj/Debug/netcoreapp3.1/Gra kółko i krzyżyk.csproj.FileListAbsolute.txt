@@ -14,3 +14,4 @@ C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\De
 C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.pdb
 C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra kółko i krzyżyk.genruntimeconfig.cache
 C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra_kółko_i_krzyżyk.Form2.resources
+C:\Users\piotr\source\repos\Gra kółko i krzyżyk\Gra kółko i krzyżyk\obj\Debug\netcoreapp3.1\Gra_kółko_i_krzyżyk.Properties.Resources.resources

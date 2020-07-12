@@ -53,12 +53,175 @@ namespace Gra_kółko_i_krzyżyk
             turn = !turn;
             b.Enabled = false;
             turn_count++;
-            checkForWinner();
-        }
-      
 
-    // Sprawdzanie wygranego lub remisu
-    private void checkForWinner()
+            label2.Focus();
+            checkForWinner();
+
+            if ((!turn) && (against_computer))
+            {
+                computer_make_move();
+            }
+        }
+
+        // Komputer
+
+        private void computer_make_move()
+        {
+           
+            Button move = null;
+
+            move = look_for_win_or_block("O"); 
+            if (move == null)
+            {
+                move = look_for_win_or_block("X");
+                if (move == null)
+                {
+                    move = look_for_corner();
+                    if (move == null)
+                    {
+                        move = look_for_open_space();
+                    }
+                }
+            }
+               move.PerformClick();
+        }
+
+        private Button look_for_open_space()
+        {
+            Console.WriteLine("Looking for open space");
+            Button b = null;
+            foreach (Control c in Controls)
+            {
+                b = c as Button;
+                if (b != null)
+                {
+                    if (b.Text == "")
+                        return b;
+                }
+            }
+            return null;
+        }
+
+        private Button look_for_corner()
+        {
+            Console.WriteLine("Looking for corner");
+            if (A1.Text == "O")
+            {
+                if (A3.Text == "")
+                    return A3;
+                if (C3.Text == "")
+                    return C3;
+                if (C1.Text == "")
+                    return C1;
+            }
+
+            if (A3.Text == "O")
+            {
+                if (A1.Text == "")
+                    return A1;
+                if (C3.Text == "")
+                    return C3;
+                if (C1.Text == "")
+                    return C1;
+            }
+
+            if (C3.Text == "O")
+            {
+                if (A1.Text == "")
+                    return A3;
+                if (A3.Text == "")
+                    return A3;
+                if (C1.Text == "")
+                    return C1;
+            }
+
+            if (C1.Text == "O")
+            {
+                if (A1.Text == "")
+                    return A3;
+                if (A3.Text == "")
+                    return A3;
+                if (C3.Text == "")
+                    return C3;
+            }
+
+            if (A1.Text == "")
+                return A1;
+            if (A3.Text == "")
+                return A3;
+            if (C1.Text == "")
+                return C1;
+            if (C3.Text == "")
+                return C3;
+
+            return null;
+        }
+
+        private Button look_for_win_or_block(string mark)
+        {
+            Console.WriteLine("Looking for win or block:  " + mark);
+            if ((A1.Text == mark) && (A2.Text == mark) && (A3.Text == ""))
+                return A3;
+            if ((A2.Text == mark) && (A3.Text == mark) && (A1.Text == ""))
+                return A1;
+            if ((A1.Text == mark) && (A3.Text == mark) && (A2.Text == ""))
+                return A2;
+
+            if ((B1.Text == mark) && (B2.Text == mark) && (B3.Text == ""))
+                return B3;
+            if ((B2.Text == mark) && (B3.Text == mark) && (B1.Text == ""))
+                return B1;
+            if ((B1.Text == mark) && (B3.Text == mark) && (B2.Text == ""))
+                return B2;
+
+            if ((C1.Text == mark) && (C2.Text == mark) && (C3.Text == ""))
+                return C3;
+            if ((C2.Text == mark) && (C3.Text == mark) && (C1.Text == ""))
+                return C1;
+            if ((C1.Text == mark) && (C3.Text == mark) && (C2.Text == ""))
+                return C2;
+
+            if ((A1.Text == mark) && (B1.Text == mark) && (C1.Text == ""))
+                return C1;
+            if ((B1.Text == mark) && (C1.Text == mark) && (A1.Text == ""))
+                return A1;
+            if ((A1.Text == mark) && (C1.Text == mark) && (B1.Text == ""))
+                return B1;
+
+            if ((A2.Text == mark) && (B2.Text == mark) && (C2.Text == ""))
+                return C2;
+            if ((B2.Text == mark) && (C2.Text == mark) && (A2.Text == ""))
+                return A2;
+            if ((A2.Text == mark) && (C2.Text == mark) && (B2.Text == ""))
+                return B2;
+
+            if ((A3.Text == mark) && (B3.Text == mark) && (C3.Text == ""))
+                return C3;
+            if ((B3.Text == mark) && (C3.Text == mark) && (A3.Text == ""))
+                return A3;
+            if ((A3.Text == mark) && (C3.Text == mark) && (B3.Text == ""))
+                return B3;
+
+            if ((A1.Text == mark) && (B2.Text == mark) && (C3.Text == ""))
+                return C3;
+            if ((B2.Text == mark) && (C3.Text == mark) && (A1.Text == ""))
+                return A1;
+            if ((A1.Text == mark) && (C3.Text == mark) && (B2.Text == ""))
+                return B2;
+
+            if ((A3.Text == mark) && (B2.Text == mark) && (C1.Text == ""))
+                return C1;
+            if ((B2.Text == mark) && (C1.Text == mark) && (A3.Text == ""))
+                return A3;
+            if ((A3.Text == mark) && (C1.Text == mark) && (B2.Text == ""))
+                return B2;
+
+            return null;
+        }
+
+
+        // Sprawdzanie wygranego lub remisu
+        private void checkForWinner()
         {
             bool there_is_a_winner = false;
 
@@ -183,7 +346,7 @@ namespace Gra_kółko_i_krzyżyk
         // Jak grać?
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gracze obejmują pola na przemian dążąc do objęcia trzech pól w jednej linii, kolumnie bądź skosie przy jednoczesnym uniemożliwieniu tego samego przeciwnikowi. Pole może być objęte przez jednego gracza i nie zmienia swego właściciela przez cały przebieg gry.", "Jak grać?");
+            MessageBox.Show("Gracze obejmują pola na przemian dążąc do objęcia trzech pól w jednej linii, kolumnie bądź skosie przy jednoczesnym uniemożliwieniu tego samego przeciwnikowi.\nPole może być objęte przez jednego gracza i nie zmienia swego właściciela przez cały przebieg gry.\n\nAby zmierzyć się z komputerem w polu na imię drugiego gracza wpisz komputer.", "Jak grać?");
         }
 
         // Restart
